@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../header/Header'
 
 const MainDashBoard = () => {
   return (
-    <div>You have been successfully logged in</div>
+    <div>
+      <Header/>
+      You have been successfully logged in</div>
   )
 }
 
