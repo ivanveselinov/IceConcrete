@@ -22,8 +22,12 @@ const Header = () => {
         
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}
         {appUser.uid &&
-        <div className='w-1/4 border bg-lime-700'>
-          <p className='Break text-3xl text-center p-2'>Welcome back {appUser.email}</p>
+        <div className='w-1/4'>
+          <p className=' break text-3xl p-2'>Welcome back</p>
+         <div className='flex'>
+          <Avatar className='' src="/broken-image.jpg" />
+          <p className='p-1 text-2xl'>{appUser.email}</p>
+        </div>
         </div>
         }
 
@@ -36,7 +40,7 @@ const Header = () => {
 
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}
         {appUser.uid &&
-        <div className=' p-2 w-1/7 border-2 flex space-x-1'  on onClick={signOutUser}>
+        <div className=' p-2 w-1/7 flex space-x-1'  on onClick={signOutUser}>
           <p className='p-2 text-xl'>Logout<LogoutIcon/></p>
         </div>
 }
