@@ -10,10 +10,21 @@ function App() {
 
   const [user] = useAuthState(auth);
 
+  const [{ appUser }, dispatch ] = useContextProvider();
+  
+  useEffect(() => {
+    if (user) {
+      dispatch({
+        type: "user",
+        payload: user
+      });
+    }
+  }, [user]);
 
   return (
    
     <div>
+      {/* <MainDashBoard /> */}
         { user? <MainDashBoard /> : < Main/> }
     </div>
   );

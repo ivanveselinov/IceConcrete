@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../header/Header'
+import Home from '../../home/Home'
 
 const MainDashBoard = () => {
   return (
     <div>
-      <Header/>
-      You have been successfully logged in</div>
+      <Home/>
+    </div>
   )
 }
 
