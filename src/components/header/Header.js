@@ -18,11 +18,11 @@ const Header = () => {
   };
 
   return (
-    <div className='w-full h-36 inline-flex border border-r bg-cyan-100 justify-between'> 
+    <div className='w-full h-36 inline-flex border border-r justify-between bg-gradient-to-r from-orange-600 to-blue-600'> 
         
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}
         {appUser.uid &&
-        <div className='w-1/4'>
+        <div className="lg: w-1/4">
           <p className=' break text-3xl p-2'>Welcome back</p>
          <div className='flex'>
           <Avatar className='' src="/broken-image.jpg" />
