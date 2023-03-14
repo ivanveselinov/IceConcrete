@@ -25,8 +25,8 @@ function App() {
   return (
    
     <div>
-      <MainDashBoard />
-        {/* { user? <MainDashBoard /> : < Main/> } */}
+      {/* <MainDashBoard /> */}
+        { user? <MainDashBoard /> : < Main/> }
     </div>
   );
 }
