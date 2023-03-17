@@ -17,7 +17,7 @@ const AboutUsInput = () => {
         const { uid, email } = firebase.auth().currentUser;
 
         await db.collection('about').add({
-            text:
+            userid:
             uid,
             email,
             about,
