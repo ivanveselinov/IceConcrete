@@ -12,7 +12,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Home = () => {
 
-  const swipeScreen="object-fill w-full h-screen mt-32 z-30"
+  const swipeScreen="object-fill w-full h-screen mt-32 "
 
     // Home and Header are togther!!
   return (
