@@ -12,13 +12,13 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Home = () => {
 
-  const swipeScreen="object-fill w-full h-screen"
+  const swipeScreen="object-fill w-full h-screen mt-32"
 
     // Home and Header are togther!!
   return (
     <div className="w-full">
         <Header/>
-      <div className="w-full border-x-2">
+      <div className="">
       <>
             <Swiper
                 spaceBetween={30}
