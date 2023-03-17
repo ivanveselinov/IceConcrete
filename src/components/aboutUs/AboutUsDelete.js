@@ -8,10 +8,10 @@ const AboutUsDelete = () => {
 
     const handleDeleteAbout = (about) => {
     
-        db.collection('about').limit(1).get().then((querySnapshot) => {
+        db.collection('about').limit(1).get().then((querySnapshot) => {  // get .doc(id)
             querySnapshot.forEach((doc) => {
                 const documentId = doc.id;
-                db.collection('about').doc(documentId).delete().then((snapshots) => {
+                db.collection('about').doc(documentId).delete().then((snapshots) => { // Delete Statement
                     console.log("Document successfully deleted!");
                 }).catch((error) => {
                     console.error("Error removing document: ", error);

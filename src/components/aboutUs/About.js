@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import AboutUsDelete from './AboutUsDelete'
 import AboutUsInput from './AboutUsInput'
 import AboutUsRead from './AboutUsRead'
+import AboutUsUpdate from './AboutUsUpdate'
 
 const About = () => {
 
@@ -17,6 +18,7 @@ const About = () => {
           <div className="w-1/3 h-1/2 border m-auto rounded-x p-2 text-xl break-words overflow-scroll">
            <AboutUsRead/>
            <AboutUsDelete/>
+           <AboutUsUpdate/>
           </div>
         </div>
     </div>
