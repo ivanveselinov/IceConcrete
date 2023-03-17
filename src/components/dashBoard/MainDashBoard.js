@@ -9,7 +9,6 @@ import Projects from '../Projects/Projects'
 const MainDashBoard = () => {
   return (
     <div>
-     <Header/>
       <Home/>
       <About/>
       <Projects/>

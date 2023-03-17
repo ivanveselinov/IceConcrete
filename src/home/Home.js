@@ -12,7 +12,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Home = () => {
 
-  const swipeScreen="object-fill w-full h-screen mt-32"
+  const swipeScreen="object-fill w-full h-screen mt-32 z-30"
 
     // Home and Header are togther!!
   return (
@@ -71,7 +71,7 @@ const Home = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
-                        className="object-fill w-full h-96 h-screen"
+                        className={swipeScreen}
                         src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/283321841_140503318572058_1074524864415698550_n.jpg?alt=media&token=b6bfdb6a-f56e-4d47-81e9-c92db431bf08"
                         alt="Concrete Driveway"
                     />

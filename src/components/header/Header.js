@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <div className='w-full fixed h-36 inline-flex border border-r justify-between bg-gradient-to-r from-orange-600 to-blue-600'> 
+    <div className='w-full fixed h-32 inline-flex border border-r justify-between bg-gradient-to-r from-orange-600 to-blue-600 rounded-t-xl z-30'> 
         
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}
         {appUser.uid &&
