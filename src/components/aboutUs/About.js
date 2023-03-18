@@ -23,7 +23,7 @@ const About = () => {
         }  
         
         <div className="w-full h-3/4 border-2 flex">  
-          <div className="w-1/3 h-1/2 border m-auto rounded-xl">
+          <div className="max-w-1/3 max-h-1/2 border m-auto rounded-xl">
             <AboutUsImageRead/>
           </div>
           <div className="w-2/4 h-1/2 border rounded-xl m-auto rounded-x p-2 text-xl break-words overflow-scroll bg-slate-200">
