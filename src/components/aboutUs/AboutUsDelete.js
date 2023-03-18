@@ -8,21 +8,21 @@ const AboutUsDelete = () => {
     const [about] = useState();
 
     const handleDeleteAbout = (about) => {
-    
-        db.collection('about').limit(1).get().then((querySnapshot) => {  // get .doc(id)
-            querySnapshot.forEach((doc) => {
-                const documentId = doc.id;
-                db.collection('about').doc(documentId).delete().then((snapshots) => { // Delete
-                    console.log("Document successfully deleted!");
-                }).catch((error) => {
-                    console.error("Error removing document: ", error);
+        if (window.confirm("Are you sure that you wanted to delete About Us form??")) {
+            db.collection('about').limit(1).get().then((querySnapshot) => {  // get .doc(id)
+                querySnapshot.forEach((doc) => {
+                    const documentId = doc.id;
+                    db.collection('about').doc(documentId).delete().then((snapshots) => { // Delete
+                        console.log("Document successfully deleted!");
+                    }).catch((error) => {
+                        console.error("Error removing document: ", error);
+                    });
                 });
-            });
-        }).catch((error) => {
-            console.error("Error getting document: ", error);
-        });   
-    }
-
+            }).catch((error) => {
+                console.error("Error getting document: ", error);
+            });   
+        }
+}
     useEffect (() =>{
 
     }, [about])
