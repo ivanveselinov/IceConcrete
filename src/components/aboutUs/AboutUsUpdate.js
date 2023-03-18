@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { db } from '../../firebase/Firebase';
 import firebase from 'firebase';
-import { SettingsBackupRestore } from '@mui/icons-material';
+
 
 const AboutUsUpdate = () => {
 
-    const [about, setAbout] = useState();
+    const [about, setAbout] = useState('');
+
 
    const updateDocument  = (e) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ const AboutUsUpdate = () => {
     const docRef = collectionRef.doc(documentId);
 
     docRef.update({
-        about: 'Test'
+        about: about
         // add other fields and values as needed
       })
       .then(() => {
@@ -43,8 +44,9 @@ const AboutUsUpdate = () => {
                     onChange={(e) => setAbout(e.target.value)}
                     rows="3"
                 />
+
                 <button 
-                    type='submit'
+                    type='Update'
                     className="w-20 h-20">
                     Update
                 </button>
