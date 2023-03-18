@@ -38,7 +38,7 @@ const AboutUsUpdate = () => {
     <div>
           <form onSubmit={updateDocument}>
             <div>
-                <input
+                <textarea
                     className='w-60 pb-1 pt-1 mt-1 p-2 rounded-xl bg-green-300'
                     placeholder='Update....'
                     onChange={(e) => setAbout(e.target.value)}

@@ -31,7 +31,7 @@ const AboutUsInput = () => {
     <div>
         <form onSubmit={createAboutUs}>
             <div>
-                <input
+                <textarea
                     className='w-60 pb-1 pt-1 mt-1 p-2 rounded-xl bg-green-300'
                     placeholder='Message....'
                     onChange={(e) => setAbout(e.target.value)} value={about}
