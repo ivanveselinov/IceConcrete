@@ -16,7 +16,7 @@ const AboutUsRead = () => {
 
   return (
     
-    <div className="w-full p-2 border h-full">    
+    <div className="w-full p-2 h-full">    
         {about?.map(({ id, uid, email, about, createAt}) =>
             <div key={id}>
                <p className="text-2xl">{about}</p>

@@ -30,6 +30,7 @@ const AboutUsDelete = () => {
     return (
     <div onClick={handleDeleteAbout}>
         <Button 
+        className="h-10"
         variant="outlined" 
         startIcon={<DeleteIcon />}
         type='submit'>

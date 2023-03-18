@@ -59,17 +59,21 @@ const AboutUsInput = () => {
     }
 
     return (
-    <div className="w-full space-x-1 flex  max-h-min">
+    <div className="flex">
+      <div className="w-full p-1 space-x-1 ">
          <textarea
-                        className="pb-1 pt-1  p-2 rounded-xl w-1/2 "
+                        className="p-2 rounded-xl w-full"
                         placeholder='Insert About Us Section Here....'
                         onChange={(e) => setAbout(e.target.value)} value={about}
-                        rows="6"
+                        rows="5"
                     />    
-        <div className="w-1/6 m-auto p-4 flex space-x-2 ">
+      </div>
+        <div className="w-full m-auto p-4 flex space-x-2 ">
+           
             <form onSubmit={createAboutUs}>
-                   
+        
                     <Button 
+                    className="h-10"
                     variant="contained" 
                     endIcon={<SendIcon />}
                     type='submit'
@@ -82,9 +86,11 @@ const AboutUsInput = () => {
             <form onSubmit={updateAboutUs}>
                 <div>
                     <Button 
+                        className="h-10"
                         variant="contained"
                         type='Update'
-                        >Update
+                        >
+                          Update
                     </Button>
                 </div> 
             </form>
@@ -92,7 +98,6 @@ const AboutUsInput = () => {
 
             <AboutUsDelete/> 
 
-        
             </div>
     </div>
   )
