@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../../firebase/Firebase';
-import firebase from 'firebase';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Button } from '@mui/material';
 
 const AboutUsDelete = () => {
 
@@ -11,7 +12,7 @@ const AboutUsDelete = () => {
         db.collection('about').limit(1).get().then((querySnapshot) => {  // get .doc(id)
             querySnapshot.forEach((doc) => {
                 const documentId = doc.id;
-                db.collection('about').doc(documentId).delete().then((snapshots) => { // Delete Statement
+                db.collection('about').doc(documentId).delete().then((snapshots) => { // Delete
                     console.log("Document successfully deleted!");
                 }).catch((error) => {
                     console.error("Error removing document: ", error);
@@ -27,12 +28,13 @@ const AboutUsDelete = () => {
     }, [about])
 
     return (
-    <div className="w-20 h-20 border " onClick={handleDeleteAbout}>
-         <button 
-                type='submit'
-                className="w-20 h-20">
-                Delete
-                </button>
+    <div onClick={handleDeleteAbout}>
+        <Button 
+        variant="outlined" 
+        startIcon={<DeleteIcon />}
+        type='submit'>
+             Delete
+        </Button>
     </div>
   )
 }

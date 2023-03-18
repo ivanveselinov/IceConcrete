@@ -10,15 +10,15 @@ const About = () => {
   const [{appUser}, dispatch] = useContextProvider();
 
   return (
-    <div className='w-full h-screen border'>
+    <div className="w-full h-screen border">
         <h1 className="text-center p-10 mt-10 text-4xl">About Us </h1>
         
         {appUser.uid && 
-        <div className="w-3/4 m-auto p-8 h-40 flex  space-x-2 rounded-xl mb-2 bg-slate-200 shadow-sm">
-          <AboutUsInput/>
-          <AboutUsDelete/>
-          <AboutUsUpdate/>
-        </div>
+        <div className="w-4/5 m-auto p-1 h-40 flex space-x-2 rounded-xl mb-2 bg-slate-200 shadow-sm">
+          <div className="w-4/5 h-40 m-auto">
+            <AboutUsInput/>
+          </div>
+       </div>
         }  
         
         <div className="w-full h-3/4 border-2 flex">  
