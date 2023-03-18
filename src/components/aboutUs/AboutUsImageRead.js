@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { db } from '../../firebase/Firebase';
+import { CardMedia } from '@mui/material';
 
 
-const AboutUsRead = () => {
+const AboutUsImageRead = () => {
 
     const [about, setAbout] = useState();
 
@@ -14,16 +15,22 @@ const AboutUsRead = () => {
         })
     }, [])
 
-  return (
+
+ return (
     
     <div className="w-full p-2 h-full">    
         {about?.map(({ id, uid, email, about, postImage ,createAt}) =>
             <div key={about.id}>
-               <p className="text-2xl">{about}</p>
+                  <CardMedia
+                    component="img"
+                    height="194"
+                    className="h-56 md:h-96"
+                    image={postImage}
+                    alt={postImage}
+                />
             </div>
     )}
     </div>
   )
 }
-
-export default AboutUsRead
+export default AboutUsImageRead

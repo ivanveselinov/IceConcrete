@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useContextProvider } from '../../context/StateProvider'
 import AboutUsDelete from './AboutUsDelete'
+import AboutUsImageRead from './AboutUsImageRead'
 import AboutUsInput from './AboutUsInput'
 import AboutUsRead from './AboutUsRead'
 import AboutUsUpdate from './AboutUsUpdate'
@@ -23,7 +24,7 @@ const About = () => {
         
         <div className="w-full h-3/4 border-2 flex">  
           <div className="w-1/3 h-1/2 border m-auto rounded-xl">
-            <p>Image of Ice Concreting</p>
+            <AboutUsImageRead/>
           </div>
           <div className="w-2/4 h-1/2 border rounded-xl m-auto rounded-x p-2 text-xl break-words overflow-scroll bg-slate-200">
             <AboutUsRead/>
