@@ -4,6 +4,7 @@ import { db, storage } from '../../firebase/Firebase';
 import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
+import ProjectsDelete from './ProjectsDelete';
 
 const ProjectsInput = () => {
 
@@ -38,7 +39,7 @@ const ProjectsInput = () => {
                     (error) => console.log(error),
                     () => {
                         storage
-                        .ref('projects')
+                        .ref('project')
                         .child(doc.id)
                         .getDownloadURL()
                         .then((url) => {
@@ -148,7 +149,7 @@ const ProjectsInput = () => {
 
         {/* Calling here aboutUs deleted */}
             
-            {/* <ProjectsDelete/>  */}
+            <ProjectsDelete/> 
 
            {/* Photos Upload */}
 
