@@ -16,9 +16,9 @@ const Home = () => {
 
     // Home and Header are togther!!
   return (
-    <div className="w-full">
+    <div className="w-full h-screen">
         <Header/>
-      <div className="">
+      <div>
       <>
             <Swiper
                 spaceBetween={30}
@@ -32,13 +32,18 @@ const Home = () => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
+                className="h-screen"
             >
                 <SwiperSlide>
                     <img
                         className={swipeScreen}
                         src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/277672180_125783040044086_3289759814967505312_n.jpg?alt=media&token=4e922bb3-c652-49dc-b2f5-5e99e1e3fc8a"
                         alt="Ice Concrete Logo"
+                        style={{
+                            display : 'flex',
+                            alignItems : 'center',
+                            justifyContent : "center",
+                        }}
                     />
                 </SwiperSlide>
                 <SwiperSlide>

@@ -18,15 +18,21 @@ const AboutUsImageRead = () => {
 
  return (
     
-    <div className="w-full p-2 h-full">    
+    <div className="p-2">    
         {about?.map(({ id, uid, email, about, postImage ,createAt}) =>
             <div key={about.id}>
                   <CardMedia
+                  style={{
+                  display : 'flex',
+                  alignItems : 'center',
+                  justifyContent : "center",
+                  width : 500,
+                  height : 420,
+                }}
                     component="img"
-                    height="194"
-                    className="h-56 md:h-96"
                     image={postImage}
                     alt={postImage}
+                    className="rounded-2xl"
                 />
             </div>
     )}

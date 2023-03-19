@@ -23,15 +23,15 @@ const Header = () => {
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}
         {appUser.uid &&
         <div className="lg: w-1/4">
-          <p className=' break text-3xl p-2'>Welcome back</p>
-         <div className='flex'>
-          <Avatar className='' src="/broken-image.jpg" />
-          <p className='p-1 text-2xl'>{appUser.email}</p>
+          <p className="break text-3xl p-2">Welcome back</p>
+         <div className="flex">
+          <Avatar src="/broken-image.jpg" />
+          <p className="p-1 text-2xl">{appUser.email}</p>
         </div>
         </div>
         }
 
-        <div className='w-ful text-center flex space-x-5 m-auto text-2xl '> 
+        <div className="text-center flex space-x-5 m-auto text-2xl "> 
           <p>Home</p>
           <p>About Us</p>
           <p>Projects</p>
@@ -40,8 +40,8 @@ const Header = () => {
 
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}
         {appUser.uid &&
-        <button className=' p-2 w-1/7 flex space-x-1' on onClick={signOutUser}>
-          <p className='p-2 text-xl'>Logout<LogoutIcon/></p>
+        <button className=" p-2 w-1/7 flex space-x-1" on onClick={signOutUser}>
+          <p className="p-2 text-xl">Logout<LogoutIcon/></p>
         </button>
 }
 

@@ -12,8 +12,8 @@ const MainDashBoard = () => {
       <Home/>
       <About/>
       <Projects/>
-      <ContactUs/>
-      <Foother/>
+      {/* <ContactUs/> */}
+      {/* <Foother/> */}
     </div>
   )
 }

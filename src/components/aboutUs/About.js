@@ -9,27 +9,43 @@ import AboutUsUpdate from './AboutUsUpdate'
 const About = () => {
 
   const [{appUser}, dispatch] = useContextProvider();
+  
+  const aboutUs = "text-center p-10 mt-2 text-4xl w-full h-23"
 
   return (
-    <div className="w-full h-screen">
-        <h1 className="text-center p-10 mt-10 text-4xl">About Us </h1>
-        
+    <div className="w-full h-screen ">
+       
+     
+
+        <div className="mt-2 w-full block  "> 
+           <p className={aboutUs}>About Us </p>
+             
+          
         {appUser.uid && 
-        <div className="w-4/5 m-auto p-1 space-x-2 rounded-xl mb-2 bg-slate-300 shadow-sm">
-          <div className="w-4/5 m-auto">
-            <AboutUsInput/>
-          </div>
-       </div>
-        }  
-        
-        <div className="w-full h-3/4 border-2 flex">  
-          <div className="max-w-1/3 max-h-1/2 border m-auto rounded-xl">
-            <AboutUsImageRead/>
-          </div>
-          <div className="w-2/4 h-1/2 border rounded-xl m-auto rounded-x p-2 text-xl break-words overflow-scroll bg-slate-200">
-            <AboutUsRead/>
-          </div>
-        </div>
+          <div className="w-4/5 p-1 border space-x-2 m-auto rounded-xl mb-2 shadow-sm bg-slate-400">
+            <div className="w-full">
+              <AboutUsInput/>
+            </div>
+         </div>
+          }  
+
+          <div className="w-full h-100 flex">
+            <div className="w-1/3 flex m-auto rounded-xl mt-1 mb-1 mr-20 shadow-sm ">
+              <AboutUsImageRead/>
+            </div>
+            <div className="w-1/3 flex m-auto rounded-xl mt-6 mb-1 ml-10 bg-slate-400 shadow-sm break-words overflow-auto "
+              style={{
+                display : 'flex',
+                alignItems : 'center',
+                justifyContent : "center",
+                width : 500,
+                height : 400,
+              }}>
+              <AboutUsRead/>
+            </div>
+          </div>  
+
+        </div> 
     </div>
   )
 }
