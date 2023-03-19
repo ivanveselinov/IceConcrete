@@ -141,7 +141,7 @@ const AboutUsInput = () => {
                     <Button 
                         className="h-10"
                         variant="contained"
-                        type='Update'
+                        type='submit'
                         >
                           Update
                     </Button>
