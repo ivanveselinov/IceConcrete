@@ -9,7 +9,7 @@ import ProjectsDelete from './ProjectsDelete';
 const ProjectsInput = () => {
 
     const [projects, setProjects] = useState('');
-    const [postProjectImage, setProjectImage] = useState();
+    const [postImage, setPostImage] = useState();
     const fileRef = useRef(null);
 
     async function createProjects (e) {
@@ -26,10 +26,10 @@ const ProjectsInput = () => {
             projects,
             createAt: firebase.firestore.FieldValue.serverTimestamp()
         }).then((doc) =>{
-            if (postProjectImage) {
+            if (postImage) {
                 const uploadTask = storage
-                .ref(`projects/${doc.id}`)
-                .putString(postProjectImage, "data_url");
+                .ref(`project/${doc.id}`)
+                .putString(postImage, "data_url");
 
                 removeImage();
 
@@ -43,9 +43,9 @@ const ProjectsInput = () => {
                         .child(doc.id)
                         .getDownloadURL()
                         .then((url) => {
-                            db.collection('projects').doc(doc.id).set(
+                            db.collection('project').doc(doc.id).set(
                                 {
-                                    postProjectImage: url,
+                                  postImage: url,
                                 },
                                 {merge: true}
                             )
@@ -62,7 +62,7 @@ const ProjectsInput = () => {
     // Remove Image from Input
 
     const removeImage = () => {
-        setProjectImage(null);
+      setPostImage(null);
     }
 
     const addImageToPost = (e) => {
@@ -73,7 +73,7 @@ const ProjectsInput = () => {
         }
 
         reader.onload = (readerEvent) => {
-            setProjectImage(readerEvent.target.result)
+          setPostImage(readerEvent.target.result)
         }
     }
 
@@ -82,7 +82,7 @@ const ProjectsInput = () => {
     const updateProjects = (e) => {
         e.preventDefault();
 
-        db.collection('project').limit(1).get().then((querySnapshots) => {
+        db.collection('project').limit(100).get().then((querySnapshots) => {
             querySnapshots.forEach((doc) =>{
             const documentId = doc.id
     
@@ -118,8 +118,6 @@ const ProjectsInput = () => {
                     />    
       </div>
 
-   
-
         <div className="w-full m-auto p-4 flex space-x-2 ">
            
             <form onSubmit={createProjects}>
@@ -153,14 +151,14 @@ const ProjectsInput = () => {
 
            {/* Photos Upload */}
 
-           {postProjectImage && (
+           {postImage && (
             <div
               onClick={removeImage}
               className="flex flex-col filter hover:brightness-90 transition duration-150 transform hover:scale-95 cursor-pointer"
             >
               <img
                 loading="lazy"
-                src={postProjectImage}
+                src={postImage}
                 alt="postImage"
                 className="h-9 object-contain "
               />
