@@ -19,6 +19,13 @@ const ProjectImageRead = () => {
             {projects?.map(({id, uid, postImage, createAt}) =>
                 <div key={id}>
                    <CardMedia
+                        style={{
+                            display : 'flex',
+                            alignItems : 'center',
+                            justifyContent : "center",
+                            width : 300,
+                            height : 300,
+                        }}                   
                         component="img"
                         height="194"
                         image={postImage}

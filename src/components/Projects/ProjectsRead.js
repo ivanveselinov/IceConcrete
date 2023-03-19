@@ -6,7 +6,7 @@ const ProjectsRead = () => {
     const [projects, setProjects] = useState();
 
     useEffect(() => {
-        db.collection('project').orderBy('createAt', 'desc').limit(1).onSnapshot(snapshot =>{
+        db.collection('project').orderBy('createAt', 'desc').limit(100).onSnapshot(snapshot =>{
             setProjects(snapshot.docs.map(doc => doc.data()))
             console.log(`Data: ${snapshot.docs}`);
         })

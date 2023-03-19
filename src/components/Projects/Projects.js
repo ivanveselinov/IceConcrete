@@ -9,8 +9,8 @@ const Projects = () => {
   const [{appUser}, dispatch] = useContextProvider();
 
   return (
-    <div className="w-full h-screen ">
-          <h1 className="text-center p-10 mt-10 text-4xl">Projects </h1>
+    <div className="w-full h-screen bg-slate-600 ">
+          <h1 className="text-center p-10 text-4xl">Projects </h1>
           
           {appUser.uid && 
         <div className="w-4/5 m-auto p-1 space-x-2 rounded-xl mb-2 bg-slate-300 shadow-sm">
@@ -20,19 +20,23 @@ const Projects = () => {
        </div>
         } 
 
-      <div className="w-full m-auto mr-2 h-full border-2 flex">
-        <div className="w-1/2 mt-1 flex h-1/3 border">
-          <div className="w-1/2 border ml-2 mb-2 mr-1 h-full">
-            <ProjectImageRead/>
+        <div className="w-full border-2 bg-white flex space-x-10">
+            <div className="w-1/2 mt-1 flex border rounded-xl">
+              <div className="mt-1 ml-2 mb-2 mr-1 h-full">
+                <ProjectImageRead/>
+              </div>
+              <div className="p-2 break-words overflow-auto w-1/2 border mt-1 mb-2 mr-1 h-full bg-slate-400"
+                style={{
+                  display : 'flex',
+                  alignItems : 'center',
+                  justifyContent : "center",
+                  width : 390,
+                  height : 300,
+                }}>
+                <ProjectsRead/>
+              </div>
+            </div>
           </div>
-          <div className="p-2 break-words overflow-auto w-1/2 border mr-2 mb-2 mr-1 h-full">
-            <ProjectsRead/>
-          </div>
-        </div>
-
-      </div>
-
-      
     </div>
   )
 }
