@@ -4,12 +4,13 @@ import { db, storage } from '../../firebase/Firebase';
 import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
-import ProjectsDelete from './ProjectsDelete';
+import { useContextProvider } from '../../context/StateProvider';
 
 const ProjectsInput = () => {
 
     const [projects, setProjects] = useState('');
     const [postImage, setPostImage] = useState();
+    const [{appUser}, dispatch] = useContextProvider();
     const fileRef = useRef(null);
 
     async function createProjects (e) {
@@ -20,10 +21,9 @@ const ProjectsInput = () => {
         const { uid, email } = firebase.auth().currentUser;
 
         await db.collection('project').add({
-            userid:
-            uid,
-            email,
-            projects,
+            user: appUser?.email,
+            userid: appUser.uid,
+            projects: projects,
             createAt: firebase.firestore.FieldValue.serverTimestamp()
         }).then((doc) =>{
             if (postImage) {
@@ -144,10 +144,6 @@ const ProjectsInput = () => {
                 </div> 
 
             </form>
-
-        {/* Calling here aboutUs deleted */}
-            
-            <ProjectsDelete/> 
 
            {/* Photos Upload */}
 

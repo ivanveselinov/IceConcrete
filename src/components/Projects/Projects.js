@@ -23,7 +23,6 @@ const Projects = () => {
           <div className="w-full border-2 bg-slate-400 "> 
           <ProjectsRead
               />
-          
         </div>
       </div>
     </div>

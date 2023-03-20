@@ -23,10 +23,9 @@ const AboutUsInput = () => {
         const { uid, email } = firebase.auth().currentUser;
 
         await db.collection('about').add({
-            userid:
-            uid,
-            email,
-            about,
+            user: appUser?.email,
+            userid: appUser.uid,
+            projects: about,
             createAt: firebase.firestore.FieldValue.serverTimestamp()
         }).then((doc) => {
           if (postImage) {

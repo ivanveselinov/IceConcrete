@@ -1,11 +1,13 @@
-import { CardMedia } from '@mui/material';
+import { Button, CardMedia } from '@mui/material';
 import React, { useState, useEffect } from 'react'
 import { db } from '../../firebase/Firebase';
-import ProjectsDelete from './ProjectsDelete';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { useContextProvider } from '../../context/StateProvider'
 
 const ProjectsRead = () => {
 
     const [projects, setProjects] = useState();
+    const [{appUser}, {products}, dispatch] = useContextProvider();
 
     useEffect(() => {
         db.collection('project').orderBy('createAt', 'desc').limit(100).onSnapshot(snapshot =>{
@@ -13,6 +15,31 @@ const ProjectsRead = () => {
             console.log(`Data: ${snapshot.docs}`);
         })
     }, [])
+
+            
+    const handleDeleteProject = () => {
+
+        if (window.confirm("Are you sure that you wanted to delete Project form??")) {
+        
+            db.collection('project').limit(1).get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                const documentId = doc.id;
+
+                db.collection('project').doc(documentId).delete().then(() =>{
+                    console.log("Document successfully deleted!");
+                    console.log(documentId)
+                }).catch((error) =>{
+                    console.error("Error removing document: ", error);
+                })
+            })
+        }).catch((error) => {
+            console.error("Error getting document: ", error);
+        })
+    } else{
+        console.log("Form is not deleted")
+        }
+    }
+
 
   return (
    
@@ -47,6 +74,14 @@ const ProjectsRead = () => {
                                     <p className="text-2xl">{projects}</p>
                             </div>
                         </div>
+                        {appUser.uid && (
+                        <Button onClick={handleDeleteProject}
+                                className="h-10 "
+                                variant="outlined" 
+                                startIcon={<DeleteIcon />}
+                                type='submit'>
+                            </Button>
+                        )}
                     </div>
                 </div>
              )}  
