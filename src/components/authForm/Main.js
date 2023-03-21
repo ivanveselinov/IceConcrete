@@ -72,6 +72,7 @@ const Main = () => {
     }, [user])
 
   return (
+    
     <div className="sm:w-full lg:w-full text-center m-auto text-2xl p-40 " >
       <p className="sm:text-2xl sm:font-bold mb-3 text-lime-400 font-bold lg:text-6xl underline text-center">Welcome to Ice Concreting </p>
       <div className="sm: w-3/4 lg:w-1/2 border text-center m-auto mb-10 rounded-xl bg-blue-200 p-4">
@@ -93,6 +94,7 @@ const Main = () => {
       )}
       </div>
     </div>
+
     )
 }
 

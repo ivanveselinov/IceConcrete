@@ -4,7 +4,8 @@ import {useAuthState} from 'react-firebase-hooks/auth';
 import { useEffect } from "react";
 import { useContextProvider } from "../context/StateProvider";
 import { auth } from "../firebase/Firebase";
-import MainDashBoard from './dashBoard/MainDashBoard';
+import { Route, Routes } from 'react-router-dom';
+import MainDashBoard from './dashBoard/MainDashBoard'
 
 
 function App() {
@@ -23,11 +24,13 @@ function App() {
   }, [user]);
 
   return (
-   
-    <div>
-      {/* <MainDashBoard /> */}
-        { user? <MainDashBoard /> : < Main/> }
-    </div>
+    <Routes>
+      <Route path="/admin" element={<Main/>}>  
+      </Route>
+
+      <Route path="/" element={<MainDashBoard/>}>
+      </Route>
+    </Routes>
   );
 }
 
