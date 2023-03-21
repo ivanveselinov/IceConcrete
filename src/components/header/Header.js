@@ -3,6 +3,7 @@ import { useContextProvider } from '../../context/StateProvider'
 import firebase from "firebase";
 import Avatar from '@mui/material/Avatar';
 import LogoutIcon from '@mui/icons-material/Logout';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 const Header = () => {
@@ -32,10 +33,10 @@ const Header = () => {
         }
 
         <div className="text-center flex space-x-5 m-auto text-2xl "> 
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Projects</p>
-          <p>Contact Us</p>
+          <AnchorLink href="#home">Home</AnchorLink>
+          <AnchorLink href="#aboutUs">About Us</AnchorLink>
+          <AnchorLink href="#projects">Projects</AnchorLink>
+          <AnchorLink href="#contactUs">Contact Us</AnchorLink>
         </div>
 
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}

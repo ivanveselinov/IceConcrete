@@ -8,7 +8,7 @@ const Projects = () => {
   const [{appUser}, dispatch] = useContextProvider();
 
   return (
-    <div className="w-full bg-slate-600 ">
+    <div className="w-full bg-slate-600 pt-24" id="projects">
           <h1 className="text-center p-10 text-4xl">Projects </h1>
           
        {appUser.uid && 

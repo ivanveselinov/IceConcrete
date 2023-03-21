@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { useContextProvider } from '../../context/StateProvider'
-import AboutUsDelete from './AboutUsDelete'
 import AboutUsImageRead from './AboutUsImageRead'
 import AboutUsInput from './AboutUsInput'
 import AboutUsRead from './AboutUsRead'
-import AboutUsUpdate from './AboutUsUpdate'
 
 const About = () => {
 
@@ -13,7 +11,7 @@ const About = () => {
   const aboutUs = "text-center p-10 mt-2 text-4xl w-full h-23"
 
   return (
-    <div className="w-full h-screen ">
+    <div className="w-full h-screen pt-24" id="aboutUs">
        
      
 

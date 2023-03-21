@@ -16,7 +16,7 @@ const Home = () => {
 
     // Home and Header are togther!!
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen" id="home">
         <Header/>
       <div>
       <>
