@@ -23,10 +23,11 @@ const AboutUsInput = () => {
         const { uid, email } = firebase.auth().currentUser;
 
         await db.collection('about').add({
-            user: appUser?.email,
-            userid: appUser.uid,
-            projects: about,
-            createAt: firebase.firestore.FieldValue.serverTimestamp()
+          text:
+          uid,
+          email,
+          about,
+          createAt: firebase.firestore.FieldValue.serverTimestamp()
         }).then((doc) => {
           if (postImage) {
             const uploadTask = storage 
@@ -109,8 +110,8 @@ const AboutUsInput = () => {
     }
     
     return (
-    <div className="flex">
-      <div className="w-full p-1 space-x-1 ">
+    <div>
+      <div className="w-full p-1 space-x-1 border-b">
          <textarea
                         className="p-2 rounded-xl w-full"
                         placeholder='Insert About Us Section Here....'
@@ -119,9 +120,7 @@ const AboutUsInput = () => {
                     />    
       </div>
 
-   
-
-        <div className="w-full m-auto p-4 flex space-x-2 ">
+        <div className="w-full m-auto p-4 flex space-x-2 border-2 ">
            
             <form onSubmit={createAboutUs}>
         
