@@ -11,7 +11,7 @@ const About = () => {
   const aboutUs = "text-center p-10 mt-2 text-4xl w-full h-23"
 
   return (
-    <div className="w-full h-screen pt-24" id="aboutUs">
+    <div className="w-full pt-24 border-b-2 " id="aboutUs">
        
      
 
@@ -20,7 +20,7 @@ const About = () => {
              
           
         {appUser.uid && 
-          <div className="w-4/5 p-1 border space-x-2 m-auto rounded-xl mb-2 shadow-sm bg-slate-400">
+          <div className="w-1/3 p-1 border space-x-2 m-auto rounded-xl mb-2 shadow-sm bg-slate-400">
             <div className="w-full">
               <AboutUsInput/>
             </div>

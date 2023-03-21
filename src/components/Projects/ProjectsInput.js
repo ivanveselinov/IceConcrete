@@ -108,8 +108,8 @@ const ProjectsInput = () => {
   return (
 
 
-    <div className="flex">
-      <div className="w-full p-1 space-x-1 ">
+    <div className="shadow-sm">
+    <div className="p-1 space-x-1 border-b">
          <textarea
                         className="p-2 rounded-xl w-full"
                         placeholder='Insert About Us Section Here....'
