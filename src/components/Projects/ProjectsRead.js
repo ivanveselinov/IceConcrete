@@ -9,11 +9,15 @@ const ProjectsRead = () => {
     const [projects, setProjects] = useState();
     const [{appUser}, {products}, dispatch] = useContextProvider();
 
-    useEffect(() => {
+
+        useEffect(() => {
+
         db.collection('project').orderBy('createAt', 'desc').limit(100).onSnapshot(snapshot =>{
-            setProjects(snapshot.docs.map(doc => doc.data()))
+            setProjects(snapshot.docs.map(doc => ({ id: doc.id, image: doc.postImage, product: doc.products, ...doc.data()})))
             console.log(`Data: ${snapshot.docs}`);
+
         })
+
     }, [])
 
             
@@ -70,7 +74,8 @@ const ProjectsRead = () => {
                                 // width : 400,
                                 height : 300,
                                 }}
-                                >
+                                >   
+                                    <p>{id}</p>
                                     <p className="text-2xl">{projects}</p>
                             </div>
                         </div>
