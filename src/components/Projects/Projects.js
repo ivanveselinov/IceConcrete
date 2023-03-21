@@ -19,7 +19,7 @@ const Projects = () => {
        </div>
         } 
 
-        <div className="w-full bg-white  space-x-10">
+        <div className="w-full space-x-10">
           <div className="w-full border-b-2"> 
           <ProjectsRead
               />

@@ -26,11 +26,12 @@ const Login = (props) => {
     return (
 
         <selection>
-     
+          
+        <div className="flex mt-10 ml-20">
           <p className='p-3 '><AccountCircleIcon sx={{ fontSize: 30 }}/>User name:
-        
-            <Input 
-            className=" h-10 ml-2 text-xl"
+          </p>
+          <Input 
+            className=" h-10 mt-2 text-xl"
             placeholder="noname@gmail.com"
             type="text" 
             autoFocus 
@@ -40,14 +41,14 @@ const Login = (props) => {
             inputProps={ariaLabel} 
 
             />
-          </p>
-          
             <p className="bg-red-500 mt-2">{emailError}</p>
-           
+          </div>
+
+          <div className="flex mt-10  ml-20 m-auto">
             <label className="text-2xl p-2 "><HttpsIcon sx={{ fontSize: 30 }}/>Password: </label>
            
             <Input
-            className="bg-white-100 ml-2 h-10 mt-10 text-2xl mb-10"
+            className="bg-white-100"
             placeholder="Password"
             type="password" 
             required 
@@ -57,7 +58,8 @@ const Login = (props) => {
             />
 
             <p className="bg-red bg-red-500 mt-2">{passwordError}</p>  
-      
+          
+          </div>
           
 
           <div  className="text-center w-full mt-1 ">

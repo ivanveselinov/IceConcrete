@@ -1,6 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import { useContextProvider } from '../../context/StateProvider';
 import { fire } from '../../firebase/Firebase';
+import MainDashBoard from '../dashBoard/MainDashBoard';
 import Hero from './Hero';
 import Login from './Login';
 
@@ -11,6 +14,8 @@ const Main = () => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [hasAccount, setHasAccount] = useState('');
+    const [{appUser}, dispatch] = useContextProvider()
+    const navigate = useNavigate();
 
     const clearInputs = () => {
         setEmail('');
@@ -24,6 +29,13 @@ const Main = () => {
 
     const handleLogin = () => {
         clearErrors();
+            
+            // If user is logged in then send me to main page!! 
+             if (appUser) {   
+                console.log("USER IS HERE!!", appUser)
+                navigate("/")
+             }
+
         fire.auth().signInWithEmailAndPassword(email, password).catch((err) => {
             switch(err.code) {
                 case "auth/invalid-email":
@@ -36,10 +48,12 @@ const Main = () => {
                                     break;
             }
         });
+     
     }
 
     const handleSignUp = () => {
         clearErrors();
+
         fire.auth().createUserWithEmailAndPassword(email,password).catch((err) => {
             switch (err.code) {
                 case "auth/email-already-in-use":
@@ -71,11 +85,14 @@ const Main = () => {
         authListener();
     }, [user])
 
+
+
   return (
     
     <div className="sm:w-full lg:w-full text-center m-auto text-2xl p-40 " >
       <p className="sm:text-2xl sm:font-bold mb-3 text-lime-400 font-bold lg:text-6xl underline text-center">Welcome to Ice Concreting </p>
       <div className="sm: w-3/4 lg:w-1/2 border text-center m-auto mb-10 rounded-xl bg-blue-200 p-4">
+
       {user ? (
           <Hero handleLogout={handleLogout}/>
       ) :  ( 
@@ -91,6 +108,7 @@ const Main = () => {
       emailError={emailError}
       passwordError={passwordError}
       />
+      
       )}
       </div>
     </div>

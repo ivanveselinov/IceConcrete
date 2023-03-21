@@ -11,6 +11,7 @@ const About = () => {
   const aboutUs = "text-center p-10 mt-2 text-4xl w-full h-23"
 
   return (
+
     <div className="w-full pt-24 border-b-2 " id="aboutUs">
        
      

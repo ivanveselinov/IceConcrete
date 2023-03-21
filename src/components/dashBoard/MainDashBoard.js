@@ -8,7 +8,7 @@ import Projects from '../Projects/Projects'
 
 const MainDashBoard = () => {
   return (
-    <div>
+    <div className="bg-slate-200">
       <Home/>
       <About/>
       <Projects/>
