@@ -22,17 +22,19 @@ const Login = (props) => {
                emailError, 
                 passwordError
             } = props;
+    
+      const icons = "mb-2"
 
     return (
 
         <selection>
           
-        <div className="flex mt-10 ml-20">
-          <p className='p-3 '><AccountCircleIcon sx={{ fontSize: 30 }}/>User name:
+        <div className="flex mt-10 ml-20 border-2">
+          <p className='p-3 '><AccountCircleIcon className={icons} sx={{ fontSize: 30 }}/>User name:
           </p>
           <Input 
-            className=" h-10 mt-2 text-xl"
-            placeholder="noname@gmail.com"
+            className="h-10 mt-3 text-xl"
+            placeholder="Noname@gmail.com"
             type="text" 
             autoFocus 
             required 
@@ -44,11 +46,11 @@ const Login = (props) => {
             <p className="bg-red-500 mt-2">{emailError}</p>
           </div>
 
-          <div className="flex mt-10  ml-20 m-auto">
-            <label className="text-2xl p-2 "><HttpsIcon sx={{ fontSize: 30 }}/>Password: </label>
+          <div className="flex mt-10 ml-20 m-auto border-2">
+            <label className="text-2xl p-2 ml-2 mr-3 "><HttpsIcon className={icons} sx={{ fontSize: 30 }}/>Password: </label>
            
             <Input
-            className="bg-white-100"
+            className="h-10 mt-2 text-xl"
             placeholder="Password"
             type="password" 
             required 
@@ -57,7 +59,7 @@ const Login = (props) => {
             inputProps={ariaLabel} 
             />
 
-            <p className="bg-red bg-red-500 mt-2">{passwordError}</p>  
+            <p className="bg-red bg-red-500">{passwordError}</p>  
           
           </div>
           

@@ -90,6 +90,8 @@ const Header = () => {
  
 
   const icons = " mb-2"
+  const hoverHeader = "hover:text-blue-300"
+
   return (
 
     <div className="w-full fixed h-32 inline-flex border-r justify-between bg-gradient-to-r from-orange-600 to-blue-600 rounded-t-xl z-30"> 
@@ -108,10 +110,10 @@ const Header = () => {
 
         <div className="text-center flex m-auto space-x-20 text-2xl "> 
       
-          <AnchorLink href="#home"><HomeIcon sx ={{ fontSize: 30 }} className={icons}/>Home</AnchorLink>
-          <AnchorLink href="#aboutUs"><PeopleIcon sx ={{ fontSize: 30 }} className={icons}/>About Us</AnchorLink>
-          <AnchorLink href="#projects"><EngineeringIcon sx ={{ fontSize: 30 }} className={icons}/>Projects</AnchorLink>
-          <AnchorLink href="#contactUs"><RecentActorsIcon sx ={{ fontSize: 30 }} className="mb-1"/>Contact Us</AnchorLink>
+          <AnchorLink href="#home" className={hoverHeader}><HomeIcon sx ={{ fontSize: 30 }} className={icons}/>Home</AnchorLink>
+          <AnchorLink href="#aboutUs" className={hoverHeader}><PeopleIcon sx ={{ fontSize: 30 }} className={icons}/>About Us</AnchorLink>
+          <AnchorLink href="#projects" className={hoverHeader}><EngineeringIcon sx ={{ fontSize: 30 }} className={icons}/>Projects</AnchorLink>
+          <AnchorLink href="#contactUs" className={hoverHeader}><RecentActorsIcon sx ={{ fontSize: 30 }} className="mb-1"/>Contact Us</AnchorLink>
             <div className="bg-slate-200 dark:text-gray-100 dark:bg-slate-900 duration-100">
               <div className="fixed top-5 right-10 duration-100 dark:bg-slate-700 bg-gray-100 rounded ">
                 {
