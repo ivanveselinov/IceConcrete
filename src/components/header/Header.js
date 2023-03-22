@@ -107,25 +107,26 @@ const Header = () => {
         }
 
         <div className="text-center flex m-auto space-x-20 text-2xl "> 
-        <div className="bg-slate-200 dark:text-gray-100 dark:bg-slate-900 duration-100">
-          <div className="fixed top-5 right-10 duration-100 dark:bg-slate-700 bg-gray-100 rounded ">
-          {
-            options?.map(opt => (
-            <button
-              key={opt.text} 
-              onClick={() => setTheme(opt.text)}
-              className={`w-8 h-8 leading-9 text-xl rounded-full m-1 text-sky-600  
-              ${theme === opt.text && 'text-sky-900'}`}>
-               <ion-icon name={opt.icon}></ion-icon>
-            </button>
-            ))
-          }
-      </div>
-      </div>
+      
           <AnchorLink href="#home"><HomeIcon sx ={{ fontSize: 30 }} className={icons}/>Home</AnchorLink>
           <AnchorLink href="#aboutUs"><PeopleIcon sx ={{ fontSize: 30 }} className={icons}/>About Us</AnchorLink>
           <AnchorLink href="#projects"><EngineeringIcon sx ={{ fontSize: 30 }} className={icons}/>Projects</AnchorLink>
           <AnchorLink href="#contactUs"><RecentActorsIcon sx ={{ fontSize: 30 }} className="mb-1"/>Contact Us</AnchorLink>
+            <div className="bg-slate-200 dark:text-gray-100 dark:bg-slate-900 duration-100">
+              <div className="fixed top-5 right-10 duration-100 dark:bg-slate-700 bg-gray-100 rounded ">
+                {
+                  options?.map(opt => (
+                  <button
+                    key={opt.text} 
+                    onClick={() => setTheme(opt.text)}
+                    className={`w-8 h-8 leading-9 text-xl rounded-full m-1 text-sky-600  
+                    ${theme === opt.text && 'text-sky-900'}`}>
+                    <ion-icon name={opt.icon}></ion-icon>
+                  </button>
+                  ))
+                }
+              </div>
+            </div>
         </div>
 
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}

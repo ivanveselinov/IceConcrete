@@ -18,7 +18,7 @@ const AboutUsImageRead = () => {
 
  return (
     
-    <div className="p-2">    
+    <div className="p-1">    
         {about?.map(({ id, uid, email, about, postImage ,createAt}) =>
             <div key={about.id}>
                   <CardMedia
@@ -32,7 +32,7 @@ const AboutUsImageRead = () => {
                     component="img"
                     image={postImage}
                     alt={postImage}
-                    className="rounded-2xl"
+                    className="rounded-xl"
                 />
             </div>
     )}

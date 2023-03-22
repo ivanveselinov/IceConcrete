@@ -46,30 +46,32 @@ const ProjectsRead = () => {
 
 
   return (
+
    
     <div className="space-x-10 ">
         <div className="w-full mt-1 mb-1 ml-1 mr-1 inline-block ">
             
               {projects?.map(({id, uid, postImage, projects, createAt}) =>
                 {
+                    
                       return <div className="w-[45%] ml-10 inline-block mb-2 bg-slate-400 rounded-xl" key={id}>
-
+                        <div className="bg-red-500 rounded-xl">
                           <div className="w-full flex rounded-xl">
-                              <div className="w-1/2 flex">
-                                  <CardMedia className="rounded-l-xl"
+                              <div className="w-1/2 flex mt-1 mb-1 ml-1 ">
+                                  <CardMedia className="rounded-l-xl bg-slate-400"
                                       style={{
                                           display: "flex",
                                           alignItems: "center",
                                           justifyContent: "center",
-                                          width: 300,
-                                          height: 310,
+                                        //   width: 300,
+                                        //   height: 310,
                                       }}
                                       component="img"
                                       height="194"
                                       image={postImage}
                                       alt={postImage} />
                               </div>
-                              <div className="w-1/2 flex ">
+                              <div className="w-1/2 flex bg-slate-400 mt-1 mb-1 mr-1 rounded-r-xl">
                                   <div key={id} className="w-full p-2 break-words overflow-auto mb-2 mr-1 h-full"
                                       style={{
                                           justifyContent: "center",
@@ -89,10 +91,12 @@ const ProjectsRead = () => {
                                   </Button>
                               )}
                           </div>
-                      </div>;
+                      </div>
+                    </div>
                   }
              )}  
         </div>
+   
     </div>
   )
 }
