@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Home from '../../home/Home'
 import About from '../aboutUs/About'
 import ContactUs from '../contactUs/ContactUs'
@@ -7,8 +7,10 @@ import Header from '../header/Header'
 import Projects from '../Projects/Projects'
 
 const MainDashBoard = () => {
+
   return (
-    <div className="bg-slate-200">
+
+    <div >   
       <Home/>
       <About/>
       <Projects/>
