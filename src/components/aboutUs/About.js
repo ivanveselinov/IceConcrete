@@ -34,21 +34,22 @@ const About = () => {
             </div>
          
             {/* <div className="w-1/3 flex m-auto rounded-xl mt-6 mb-1 ml-10 bg-slate-400 shadow-sm break-words overflow-auto " */}
-
-            <div className="w-1/3 flex m-auto rounded-xl mb-1 ml-10 bg-slate-400 shadow-sm break-words overflow-auto "
+          
+            <div className="w-1/3 h-auto flex m-auto rounded-xl ml-10 bg-red-500 shadow-sm p-1"
               style={{
-                display : 'flex',
-                alignItems : 'center',
+                display : "flex",
+                alignItems : "center",
                 justifyContent : "center",
                 width : 500,
                 height : 430,
               }}>
-              <AboutUsRead/>
+                <div className="rounded-xl h-full border-2 w-full bg-slate-400 break-words overflow-auto ">
+                  <AboutUsRead/>
+                </div>
             </div>
           </div>
-
-        </div> 
-    </div>
+        </div>         
+      </div>
   )
 }
 
