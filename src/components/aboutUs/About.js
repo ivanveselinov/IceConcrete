@@ -28,7 +28,7 @@ const About = () => {
          </div>
           }  
 
-        <div className="w-full h-100 flex border-2">
+        <div className="w-full h-100 flex mb-12">
             <div className="max-w-1/3 flex m-auto rounded-xl mt-1 mb-1 mr-20 shadow-sm bg-red-500 ">
               <AboutUsImageRead/>
             </div>

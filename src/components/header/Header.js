@@ -131,8 +131,8 @@ const Header = () => {
 
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}
         {appUser.uid &&
-        <button className=" p-2 w-1/7 flex space-x-1" on onClick={signOutUser}>
-          <p className="p-2 text-xl">Logout<LogoutIcon/></p>
+        <button className="mt-14 p-2 w-1/7flex space-x-1" on onClick={signOutUser}>
+          <p className="p-2 text-xl mr-2">Logout<LogoutIcon/></p>
         </button>
 }
 
