@@ -8,12 +8,16 @@ import HomeIcon from '@mui/icons-material/Home';
 import PeopleIcon from '@mui/icons-material/People';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import RecentActorsIcon from '@mui/icons-material/RecentActors';
+import { dark } from '@mui/material/styles/createPalette';
 
 const Header = () => {
 
   const [{appUser}, dispatch] = useContextProvider(); 
   const [theme, setTheme] = useState("system");
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
   const element = document.documentElement
+  console.log(darkQuery, "DarkQuery")
+
   const options = [
     {
       icon:"sunny",
@@ -28,6 +32,18 @@ const Header = () => {
       text: "system",
     }
   ];
+
+  function onWindowMatch () {
+
+  if(localStorage.theme === "dark" || (!("theme" in localStorage) && darkQuery.matches)
+  ){
+    element.classList.add("dark")
+  }else{
+    element.classList.remove("dark")
+  }
+}
+
+  onWindowMatch();
 
   useEffect(() => {
     switch (theme) {
@@ -52,6 +68,16 @@ const Header = () => {
               break;
     }
   }, [theme])
+
+  darkQuery.addEventListener("change", (e) => {
+    if(!("theme" in localStorage)) {
+      if(e.matches) {
+        element.classList.add("dark")
+      }else{
+        element.classList.remove("dark")
+      }
+    }
+  })
 
   const signOutUser = () => {
     firebase.auth().signOut();
