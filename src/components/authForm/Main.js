@@ -30,11 +30,11 @@ const Main = () => {
     const handleLogin = () => {
         clearErrors();
             
-            // If user is logged in then send me to main page!! 
+            // // If user is logged in then send me to main page!! 
              if (appUser) {   
-                console.log("USER IS HERE!!", appUser)
+                console.log("USER IS HERE!!", appUser.uid)
                 navigate("/")
-             }
+             } 
 
         fire.auth().signInWithEmailAndPassword(email, password).catch((err) => {
             switch(err.code) {
@@ -47,8 +47,9 @@ const Main = () => {
                                 setPasswordError(err.message);
                                     break;
             }
+
+        
         });
-     
     }
 
     const handleSignUp = () => {
