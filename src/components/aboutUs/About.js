@@ -22,6 +22,7 @@ const About = () => {
         <div className="mt-2 w-full block "> 
            <p className={aboutUs}>About Us </p>
              
+             <p>asdsa</p>
           
         {appUser.uid && 
           <div className="w-1/3 p-1 border space-x-2 m-auto rounded-xl mb-2 shadow-sm bg-slate-400">
