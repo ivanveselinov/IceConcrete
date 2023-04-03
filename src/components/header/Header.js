@@ -9,6 +9,8 @@ import PeopleIcon from '@mui/icons-material/People';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import RecentActorsIcon from '@mui/icons-material/RecentActors';
 import { dark } from '@mui/material/styles/createPalette';
+import Fade from 'react-reveal/Fade';
+
 
 const Header = () => {
 
@@ -93,8 +95,8 @@ const Header = () => {
   const hoverHeader = "hover:text-blue-300"
 
   return (
-
-    <div className="w-full fixed h-32 inline-flex border-r justify-between bg-gradient-to-r from-orange-600 to-blue-600 rounded-t-xl z-30"> 
+  <Fade top duration={3000}>
+    <div className="w-full fixed h-32 inline-flex border-r justify-between bg-orange-600 rounded-t-xl z-30"> 
 
       
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}
@@ -110,7 +112,7 @@ const Header = () => {
 
         <div className="text-center flex m-auto space-x-20 text-2xl "> 
       
-          <AnchorLink href="#home" className={hoverHeader}><HomeIcon sx ={{ fontSize: 30 }} className={icons}/>Home</AnchorLink>
+          <AnchorLink href="#home" className={hoverHeader}><HomeIcon sx ={{ fontSize: 30 }} clasName={icons}/>Home</AnchorLink>
           <AnchorLink href="#aboutUs" className={hoverHeader}><PeopleIcon sx ={{ fontSize: 30 }} className={icons}/>About Us</AnchorLink>
           <AnchorLink href="#projects" className={hoverHeader}><EngineeringIcon sx ={{ fontSize: 30 }} className={icons}/>Projects</AnchorLink>
           <AnchorLink href="#contactUs" className={hoverHeader}><RecentActorsIcon sx ={{ fontSize: 30 }} className="mb-1"/>Contact Us</AnchorLink>
@@ -139,6 +141,7 @@ const Header = () => {
 }
 
     </div>
+  </Fade>
   )
 }
 

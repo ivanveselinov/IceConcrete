@@ -5,11 +5,14 @@ import ContactUs from '../contactUs/ContactUs'
 import Foother from '../foother/Foother'
 import Header from '../header/Header'
 import Projects from '../Projects/Projects'
+import Fade from 'react-reveal/Fade';
+
 
 const MainDashBoard = () => {
 
   return (
 
+  <Fade duration={2000}>
     <div >   
       <Home/>
       <About/>
@@ -17,6 +20,7 @@ const MainDashBoard = () => {
       <ContactUs/>
       <Foother/>
     </div>
+  </Fade>
   )
 }
 

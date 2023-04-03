@@ -63,7 +63,7 @@ const ProjectsRead = () => {
                                           display: "flex",
                                           alignItems: "center",
                                           justifyContent: "center",
-                                          width: 300,
+                                        //   width: 300,
                                           height: 310,
                                       }}
                                       component="img"
@@ -71,11 +71,11 @@ const ProjectsRead = () => {
                                       image={postImage}
                                       alt={postImage} />
                               </div>
-                              <div className="min-w-1/2 flex bg-slate-400 mt-1 mb-1 mr-1 rounded-r-xl">
+                              <div className="min-w-1/2 w-full flex bg-slate-400 mt-1 mb-1 mr-1 rounded-r-xl">
                                   <div key={id} className="w-full p-2 break-words overflow-auto mb-2 mr-1 h-full"
                                       style={{
                                           justifyContent: "center",
-                                          width : 400,
+                                        //   width : 420,
                                           height: 300,
                                       }}
                                   >

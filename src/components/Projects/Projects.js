@@ -2,12 +2,15 @@ import React from 'react'
 import { useContextProvider } from '../../context/StateProvider'
 import ProjectsInput from './ProjectsInput'
 import ProjectsRead from './ProjectsRead';
+import Fade from 'react-reveal/Fade';
+
 
 const Projects = () => {
 
   const [{appUser}, dispatch] = useContextProvider();
 
   return (
+  <Fade duration={5000}>
     <div className="w-full pt-24" id="projects">
           <h1 className="text-center p-10 text-4xl">Projects </h1>
           
@@ -26,6 +29,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
+  </Fade>
   )
 }
 

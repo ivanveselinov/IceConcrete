@@ -2,6 +2,8 @@ import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import Fade from 'react-reveal/Fade';
+
 
 const Foother = () => {
 
@@ -9,6 +11,8 @@ const Foother = () => {
   const hoverHeader = "hover:text-blue-300"
 
   return (
+  
+  <Fade bottom duration={3000}>
     <div className="w-full h-36 inline-flex justify-between bg-gradient-to-r from-orange-600 to-blue-600 rounded-b-xl">
       <div className="w-1/3 block">
         <div className="w-20 h-1/2"></div>
@@ -32,6 +36,7 @@ const Foother = () => {
         </div>
       </div>
     </div>
+  </Fade>  
   )
 }
 
