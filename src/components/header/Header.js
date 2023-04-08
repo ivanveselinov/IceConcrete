@@ -102,8 +102,8 @@ const Header = () => {
       
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}
         {appUser.uid &&
-        <div className="lg: w-1/4">
-          <p className="break text-3xl p-2">Welcome back</p>
+        <div className="w-1/4">
+          <p className="break text-3xl p-2 ">Welcome back</p>
          <div className="flex">
           <Avatar src="/broken-image.jpg" />
           <p className="p-1 text-2xl">{appUser.email}</p>
@@ -111,7 +111,7 @@ const Header = () => {
         </div>
         }
 
-        <div className="text-center flex m-auto space-x-20 text-2xl "> 
+        <div className="text-center flex m-auto space-x-20 xs:text-sm md:text-xl xl:text-2xl "> 
       
           <AnchorLink href="#home" className={hoverHeader} ><HomeIcon sx ={{ fontSize: 30 }}  className={icons}/>Home</AnchorLink>
           <AnchorLink href="#aboutUs" className={hoverHeader}><PeopleIcon sx ={{ fontSize: 30 }} className={icons}/>About Us</AnchorLink>
@@ -136,7 +136,7 @@ const Header = () => {
 
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}
         {appUser.uid &&
-        <button className="mt-14 p-2 w-1/7flex space-x-1" on onClick={signOutUser}>
+        <button className="mt-14 p-2 w-1/7 flex space-x-1" on onClick={signOutUser}>
           <p className="p-2 text-xl mr-2">Logout<LogoutIcon/></p>
         </button>
 }

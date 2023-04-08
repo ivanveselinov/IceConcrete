@@ -19,7 +19,7 @@ const AboutUsRead = () => {
     <div className="w-full p-2 h-full">    
         {about?.map(({ id, uid, email, about, postImage ,createAt}) =>
             <div key={about.id}>
-               <p className="text-2xl">{about}</p>
+               <p className="xs:text-base md:text-l lg:text-2xl xl:text-2xl">{about}</p>
             </div>
     )}
     </div>

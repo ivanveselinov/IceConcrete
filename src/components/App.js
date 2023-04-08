@@ -25,7 +25,7 @@ function App() {
 
   return (
     
-    <section className="min-h-screen dark:text-gray-100 dark:bg-slate-900 duration-100">     
+    <section className="min-h-screen dark:text-gray-100 dark:bg-slate-900 duration-100 border-2">     
       <Routes>
           <Route path="/admin" element={<Main/>}>  
         </Route>
