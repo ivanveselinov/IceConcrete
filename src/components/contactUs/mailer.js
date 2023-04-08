@@ -46,11 +46,11 @@ const Mailer = () => {
   return (
    
     <div className="w-3/4 m-auto w-30">
-      <div className="w-1/3 mt-10 m-auto">
+      <div className="w-1/3 mt-10 m-auto xs:w-4/5 md:w-4/5 lg:w-1/3">
         <form onSubmit={sendEmail}>
         <div className="bg-red-400 rounded-xl p-1">
         <input
-                className="w-full p-2 h-12 rounded-xl bg-slate-200"
+                className="w-full p-2 h-12 rounded-xl bg-slate-200 xs:w-full md:w-full lg:w-full"
                 placeholder="Insert Name and Surname?"
                 onChange={nameChange}
                 value={name}
