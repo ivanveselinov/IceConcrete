@@ -23,7 +23,7 @@ const About = () => {
            <p className="text-center p-10 mt-2 text-4xl w-full h-23 xs:text-2xl md:text-2xl lg:text-2xl xl:text-4xl">About Us </p>
                        
         {appUser.uid && 
-          <div className="w-1/3 p-1 border space-x-2 m-auto rounded-xl mb-2 shadow-sm bg-slate-400">
+          <div className="w-1/3 p-1 border space-x-2 m-auto rounded-xl mb-2 shadow-sm bg-slate-400 xs:w-4/5 sm:w-2/3 md:w-2/3 lg:w-1/3">
             <div className="w-full">
               <AboutUsInput/>
             </div>
