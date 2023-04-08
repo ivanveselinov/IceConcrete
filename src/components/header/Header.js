@@ -118,7 +118,7 @@ const Header = () => {
           <AnchorLink href="#projects" className={hoverHeader}><EngineeringIcon sx ={{ fontSize: 30 }} className={icons}/>Projects</AnchorLink>
           <AnchorLink href="#contactUs" className={hoverHeader}><RecentActorsIcon sx ={{ fontSize: 30 }} className="mb-1"/>Contact Us</AnchorLink>
             <div className="bg-slate-200 dark:text-gray-100 dark:bg-slate-900 duration-100">
-              <div className="fixed top-5 right-10 duration-100 dark:bg-slate-700 bg-gray-100 rounded ">
+              <div className="fixed top-5 right-10 duration-100 dark:bg-slate-700 bg-gray-100 rounded xs:w-10 md:w-auto lg:w-auto xl:w-auto">
                 {
                   options?.map(opt => (
                   <button
