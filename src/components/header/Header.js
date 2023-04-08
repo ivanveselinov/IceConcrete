@@ -97,27 +97,27 @@ const Header = () => {
 
   return (
   <Fade top duration={3000}>
-    <div className="w-full fixed h-32 inline-flex border-r justify-between bg-orange-600 rounded-t-xl z-30"> 
+    <div className="w-full fixed h-32 inline-flex border-r justify-between bg-orange-600 rounded-t-xl z-30 xs:block sm:block md:inline-flex"> 
 
       
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}
         {appUser.uid &&
         <div className="w-1/4">
-          <p className="break text-3xl p-2 ">Welcome back</p>
-         <div className="flex">
-          <Avatar src="/broken-image.jpg" />
-          <p className="p-1 text-2xl">{appUser.email}</p>
+          <p className="break text-3xl p-2 xs:hidden sm:hidden md:block lg:text-3xl">Welcome back</p>
+         <div className=" xs:hidden sm:hidden md:flex">
+          <Avatar src="/broken-image.jpg"/>
+          <p className="p-1 text-2xl ">{appUser.email}</p>
         </div>
         </div>
         }
 
-        <div className="text-center flex m-auto space-x-20 xs:text-sm md:text-xl xl:text-2xl "> 
+        <div className="text-center flex m-auto space-x-20 xs:text-sm xs:mt-10 md:text-xl xl:text-2xl "> 
       
           <AnchorLink href="#home" className={hoverHeader} ><HomeIcon sx ={{ fontSize: 30 }}  className={icons}/>Home</AnchorLink>
           <AnchorLink href="#aboutUs" className={hoverHeader}><PeopleIcon sx ={{ fontSize: 30 }} className={icons}/>About Us</AnchorLink>
           <AnchorLink href="#projects" className={hoverHeader}><EngineeringIcon sx ={{ fontSize: 30 }} className={icons}/>Projects</AnchorLink>
           <AnchorLink href="#contactUs" className={hoverHeader}><RecentActorsIcon sx ={{ fontSize: 30 }} className="mb-1"/>Contact Us</AnchorLink>
-            <div className="bg-slate-200 dark:text-gray-100 dark:bg-slate-900 duration-100">
+            <div className="bg-slate-200 dark:text-gray-100 dark:bg-slate-900 duration-100 xs:hidden sm:hidden md:block">
               <div className="fixed top-5 right-10 duration-100 dark:bg-slate-700 bg-gray-100 rounded xs:w-10 md:w-auto lg:w-auto xl:w-auto">
                 {
                   options?.map(opt => (
@@ -136,8 +136,10 @@ const Header = () => {
 
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}
         {appUser.uid &&
-        <button className="mt-14 p-2 w-1/7 flex space-x-1" on onClick={signOutUser}>
-          <p className="p-2 text-xl mr-2">Logout<LogoutIcon/></p>
+        <button className="block p-2 w-1/7 space-x-1 xs:text-sm xs:flex xs:space-x-24 xs:m-auto space-x-auto sm:text-sm sm:flex md:mt-14 md:block" on onClick={signOutUser}>
+               <p className="p-1 text-2xl xs:text-base sm:text-sm md:hidden">Welcome Back</p>
+               <p className="p-1 text-2xl xs:text-base sm:text-sm md:hidden">{appUser.email}</p>
+          <p className="p-2 text-xl mr-2  xs:text-base sm:text-sm md:text-xl ">Logout<LogoutIcon/></p>
         </button>
 }
 
