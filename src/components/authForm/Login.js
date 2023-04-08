@@ -29,9 +29,11 @@ const Login = (props) => {
 
         <selection>
           
-        <div className="flex mt-10 ml-20 border-2">
+        <div className="flex mt-10 ml-20 border-2 ">
+
           <p className='p-3 '><AccountCircleIcon className={icons} sx={{ fontSize: 30 }}/>User name:
           </p>
+
           <Input 
             className="h-10 mt-3 text-xl"
             placeholder="Noname@gmail.com"
@@ -43,8 +45,11 @@ const Login = (props) => {
             inputProps={ariaLabel} 
 
             />
-            <p className="bg-red-500 mt-2">{emailError}</p>
-          </div>
+           
+        </div>
+
+        <p className="bg-red-500 mt-2 ml-20 ">{emailError}</p>
+
 
           <div className="flex mt-10 ml-20 m-auto border-2">
             <label className="text-2xl p-2 ml-2 mr-3 "><HttpsIcon className={icons} sx={{ fontSize: 30 }}/>Password: </label>
@@ -57,12 +62,10 @@ const Login = (props) => {
             value={password} 
             onChange={(e) => setPassword(e.target.value)} 
             inputProps={ariaLabel} 
-            />
-
-            <p className="bg-red bg-red-500">{passwordError}</p>  
-          
+            />  
           </div>
           
+          <p className="bg-red ml-20 mt-2 bg-red-500">{passwordError}</p>
 
           <div  className="text-center w-full mt-1 ">
                {hasAccount ? (    // on click switch on sign in and sign up
@@ -73,7 +76,8 @@ const Login = (props) => {
                  ) : ( 
                    <>
                  <Button variant="outlined" onClick={handleLogin}>Sign In</Button>
-                 <p>Don't have an account ? <Button variant="outlined" onClick={() => setHasAccount(!hasAccount)}>Sign Up</Button></p>
+                 {/* Sign up removed */}
+                 {/* <p>Don't have an account ? <Button variant="outlined" onClick={() => setHasAccount(!hasAccount)}>Sign Up</Button></p> */}
                   </>
                )}
             </div>
