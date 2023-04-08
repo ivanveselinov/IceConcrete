@@ -12,7 +12,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Home = () => {
 
-  const swipeScreen="object-fill w-full h-screen mt-32 "
+  const swipeScreen="object-fill w-full h-screen mt-11"
 
     // Home and Header are togther!!
   return (
@@ -37,7 +37,7 @@ const Home = () => {
                 <SwiperSlide>
                     <img
                         className={swipeScreen}
-                        src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/277672180_125783040044086_3289759814967505312_n.jpg?alt=media&token=4e922bb3-c652-49dc-b2f5-5e99e1e3fc8a"
+                        src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/Header%20Images%2FScreenshot%202023-04-08%20at%202.05.58%20pm.png?alt=media&token=a79ac1fc-6ceb-4e5d-a658-70fc680e57f3"
                         alt="Ice Concrete Logo"
                         style={{
                             display : 'flex',
@@ -49,38 +49,38 @@ const Home = () => {
                 <SwiperSlide>
                     <img
                           className={swipeScreen}
-                          src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/274059670_101466929142364_5804051003782854612_n.jpg?alt=media&token=3c5ec72e-aa2f-4a5f-8c47-b71141b58cf6"
+                          src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/Header%20Images%2F20230403_132945.jpg?alt=media&token=979ab8e5-7671-43de-82a3-9d8cf63f3b36"
                           alt=" Concrete Driveway"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
                           className={swipeScreen}
-                          src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/290549199_149287571026966_7299178969724135131_n.jpg?alt=media&token=30830f66-abd1-4ffb-884d-3c68decaf4c3"
+                          src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/Header%20Images%2F20221202_125141.jpg?alt=media&token=9c5f889f-8f99-4c2e-8f25-0c78e3734bbf"
                           alt="Concrete Driveway"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
                           className={swipeScreen}
-                          src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/296910509_152830087343190_4568827272072301272_n.jpg?alt=media&token=765c4fe5-79c5-42fe-81fa-b2785fc76d51"
+                          src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/Header%20Images%2F20230317_121246.jpg?alt=media&token=0105c824-a824-491c-8c1d-b30310648814"
                           alt="Concrete Driveway"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
                           className={swipeScreen}
-                          src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/297026402_152602994032566_4772238314671778486_n.jpg?alt=media&token=377cf7c2-e75f-4981-be22-800f52843897"
+                          src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/Header%20Images%2FIMG_20230303_161918_621.jpg?alt=media&token=d59a1255-e623-4cf5-907b-b54356248190"
                           alt="Concrete Driveway"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
                         className={swipeScreen}
-                        src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/283321841_140503318572058_1074524864415698550_n.jpg?alt=media&token=b6bfdb6a-f56e-4d47-81e9-c92db431bf08"
+                        src="https://firebasestorage.googleapis.com/v0/b/iceconcrete-caf1c.appspot.com/o/Header%20Images%2Fconcrete.jpg?alt=media&token=56c4640c-0342-404e-bb71-c6769350e35f"
                         alt="Concrete Driveway"
                     />
-                </SwiperSlide>
+                </SwiperSlide> 
             </Swiper>
         </>
       </div>
