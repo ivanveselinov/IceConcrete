@@ -10,7 +10,7 @@ const Projects = () => {
   const [{appUser}, dispatch] = useContextProvider();
 
   return (
-  <Fade duration={5000}>
+  <Fade duration={3000}>
     <div className="w-full pt-24" id="projects">
           <h1 className="text-center p-10 text-4xl xs:text-2xl md:text-2xl lg:text-2xl xl:text-4xl">Projects </h1>
           

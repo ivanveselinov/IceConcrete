@@ -3,7 +3,7 @@ import { useContextProvider } from '../../context/StateProvider'
 import AboutUsImageRead from './AboutUsImageRead'
 import AboutUsInput from './AboutUsInput'
 import AboutUsRead from './AboutUsRead'
-import { Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 
 
@@ -15,7 +15,7 @@ const About = () => {
 
   return (
 
-    <Zoom top bottom duration={1500}>
+    <Fade top bottom duration={3000}>
     <div className="w-full pt-24 border-b-2 " id="aboutUs">
        
      
@@ -51,7 +51,7 @@ const About = () => {
           </div>
         </div>         
       </div>
-      </Zoom>
+      </Fade>
   )
 }
 
