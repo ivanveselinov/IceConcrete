@@ -9,8 +9,8 @@ import PeopleIcon from '@mui/icons-material/People';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import RecentActorsIcon from '@mui/icons-material/RecentActors';
 import { dark } from '@mui/material/styles/createPalette';
-import Fade from 'react-reveal/Fade';
 import { Margin } from '@mui/icons-material';
+// import { Fade } from "react-awesome-reveal";
 
 
 const Header = () => {
@@ -96,8 +96,8 @@ const Header = () => {
   const hoverHeader = "hover:text-blue-300"
 
   return (
-  <Fade top duration={3000}>
-    <div className="w-full fixed h-32 inline-flex border-r justify-between bg-orange-600 rounded-t-xl z-30 xs:block sm:block md:inline-flex"> 
+  // <Fade top duration={3000}>
+    <div className="z-30 w-full fixed h-32 inline-flex border-r justify-between bg-orange-600 rounded-t-xl xs:block sm:block md:inline-flex"> 
 
       
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}
@@ -144,7 +144,7 @@ const Header = () => {
 }
 
     </div>
-  </Fade>
+  // </Fade>
   )
 }
 

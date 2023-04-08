@@ -3,7 +3,8 @@ import { useContextProvider } from '../../context/StateProvider'
 import AboutUsImageRead from './AboutUsImageRead'
 import AboutUsInput from './AboutUsInput'
 import AboutUsRead from './AboutUsRead'
-import Zoom from 'react-reveal/Zoom';
+import { Zoom } from "react-awesome-reveal";
+
 
 
 const About = () => {

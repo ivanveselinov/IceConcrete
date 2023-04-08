@@ -2,7 +2,7 @@ import React from 'react'
 import { useContextProvider } from '../../context/StateProvider'
 import ProjectsInput from './ProjectsInput'
 import ProjectsRead from './ProjectsRead';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 
 const Projects = () => {

@@ -1,6 +1,7 @@
 import React from 'react'
 import Mailer from './mailer'
-import Flip from 'react-reveal/Flip';
+import { Flip } from "react-awesome-reveal";
+
 
 
 const ContactUs = () => {

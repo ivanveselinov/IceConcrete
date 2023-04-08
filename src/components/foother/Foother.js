@@ -2,7 +2,8 @@ import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
+
 
 
 const Foother = () => {
