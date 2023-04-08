@@ -18,20 +18,20 @@ const Foother = () => {
         <div className="w-20 h-1/2"></div>
         <div className="w-80"> 
           <a href="https://www.linkedin.com/in/ivanveselinov/" className={hoverHeader} target="blank" >
-            <p className="mt-10 ml-2">
+            <p className="mt-10 ml-2 xs:text-sm md:text-l lg:text-xl xl:text-xl">
               Copyright © 2023 Ivan Veselinov
             </p>
           </a>
           </div>
       </div>
       <div className="w-1/3 h-20 m-auto text-center">
-        <p className="text-3xl text-right mt-4"> Follow Us <ThumbUpIcon className={icons} sx ={{ fontSize: 30 }}/></p>
+        <p className="text-3xl text-right mt-4 xs:text-sm md:text-l lg:text-xl xl:text-xl"> Follow Us <ThumbUpIcon className={icons} sx ={{ fontSize: 30 }}/></p>
       </div>
       <div className="w-1/3 h-28 m-auto">
-        <div className="h-1/2 w-full text-center text-3xl">
+        <div className="h-1/2 w-full text-center text-3xl xs:text-sm md:text-l lg:text-3xl xl:text-3xl">
           <a href="https://www.facebook.com/iceconcreting" className={hoverHeader} target="_blank"><FacebookIcon  sx ={{ fontSize: 40 }}/>Facebook</a>
         </div>
-        <div className="h-1/2 w-full text-center text-3xl">
+        <div className="h-1/2 w-full text-center text-3xl xs:text-sm md:text-l lg:text-3xl xl:text-3xl">
           <a href="https://www.instagram.com/iceconcreting/" className={hoverHeader} target="_blank" ><InstagramIcon  sx ={{ fontSize: 40 }}/>Instagram</a>
         </div>
       </div>
