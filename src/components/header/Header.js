@@ -137,9 +137,9 @@ const Header = () => {
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}
         {appUser.uid &&
         <button className="block p-2 w-1/7 space-x-1 xs:text-sm xs:flex xs:space-x-24 xs:m-auto space-x-auto sm:text-sm sm:flex md:mt-14 md:block" on onClick={signOutUser}>
-               <p className="p-1 text-2xl xs:text-base sm:text-sm md:hidden">Welcome Back</p>
-               <p className="p-1 text-2xl xs:text-base sm:text-sm md:hidden">{appUser.email}</p>
-          <p className="p-2 text-xl mr-2  xs:text-base sm:text-sm md:text-xl ">Logout<LogoutIcon/></p>
+               <p className="p-1 text-2xl xs:text-sm sm:text-sm md:hidden">Welcome Back</p>
+               <p className="p-1 text-2xl xs:text-sm  sm:text-sm md:hidden">{appUser.email}</p>
+          <p className="p-2 text-xl mr-2  xs:text-sm sm:text-sm md:text-xl ">Logout<LogoutIcon/></p>
         </button>
 }
 
