@@ -10,8 +10,6 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import RecentActorsIcon from '@mui/icons-material/RecentActors';
 import { dark } from '@mui/material/styles/createPalette';
 import { Margin } from '@mui/icons-material';
-// import { Fade } from "react-awesome-reveal";
-
 
 const Header = () => {
 
