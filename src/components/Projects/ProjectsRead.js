@@ -28,6 +28,7 @@ const ProjectsRead = () => {
             db.collection('project').limit(1).get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 const documentId = doc.id;
+                console.log("I am current on click documentId: ",documentId)
 
                 db.collection('project').doc(documentId).delete().then(() =>{
                     console.log("Document successfully deleted!");
