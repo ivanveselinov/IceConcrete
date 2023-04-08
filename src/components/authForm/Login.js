@@ -29,7 +29,7 @@ const Login = (props) => {
 
         <selection>
           
-        <div className="flex mt-10 ml-20 border-2 ">
+        <div className="flex mt-10 ml-20 border-2">
 
           <p className='p-3 '><AccountCircleIcon className={icons} sx={{ fontSize: 30 }}/>User name:
           </p>
