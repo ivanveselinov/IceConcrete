@@ -109,7 +109,8 @@ const Header = () => {
         </div>
         }
 
-        <div className="text-center flex m-auto space-x-20 xs:w-4/5 xs:text-sm xs:mt-5 md:mt-10 md:w-1/2 md:text-xl xl:text-2xl xl:w-1/2 "> 
+        <div className="text-center flex m-auto space-x-20 xs:w-3/4 xs:space-x-5 xs:text-sm xs:mt-5 md:mt-10 md:space-x-20 md:w-1/2 md:text-xl xl:text-2xl xl:w-1/2 "> 
+
       
           <AnchorLink href="#home" className={hoverHeader} ><HomeIcon sx ={{ fontSize: 30 }}  className={icons}/>Home</AnchorLink>
           <AnchorLink href="#aboutUs" className={hoverHeader}><PeopleIcon sx ={{ fontSize: 30 }} className={icons}/>About Us</AnchorLink>
@@ -135,9 +136,9 @@ const Header = () => {
         {/* If User is not logged in DONT DISPLAY LOGOUT!! */}
         {appUser.uid &&
         <button className="block w-1/7 space-x-1 xs:text-sm xs:flex xs:space-x-24 xs:m-auto space-x-auto sm:text-sm sm:flex md:mt-14 md:block" on onClick={signOutUser}>
-               <p className="p-1 text-2xl xs:text-sm sm:text-sm md:hidden">Welcome Back</p>
-               <p className="p-1 text-2xl xs:text-sm  sm:text-sm md:hidden">{appUser.email}</p>
-          <p className="p-2 text-xl mr-2  xs:text-sm sm:text-sm md:text-xl ">Logout<LogoutIcon/></p>
+               <p className="p-1 mt-5 text-2xl xs:text-sm sm:text-sm md:hidden">Welcome Back</p>
+               <p className="p-1 mt-5 text-2xl xs:text-sm  sm:text-sm md:hidden">{appUser.email}</p>
+          <p className="p-1 text-xl mt-5 mr-2  xs:text-sm sm:text-sm md:text-xl ">Logout<LogoutIcon/></p>
         </button>
 }
 
