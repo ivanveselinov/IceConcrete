@@ -5,8 +5,6 @@ import AboutUsInput from './AboutUsInput'
 import AboutUsRead from './AboutUsRead'
 import { Fade } from "react-awesome-reveal";
 
-
-
 const About = () => {
 
   const [{appUser}, dispatch] = useContextProvider();
