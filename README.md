@@ -1,75 +1,69 @@
-# Getting Started with Create React App
+# Project 6
+## IceConcrete- Concrete Company
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is made for **learning purposes**.
+  This project has been done to support my friend small business and to increase his popularity. This application will let Admin user to setup aboutUs and Project information to **post new stuffs** and to **remove them from the page**
 
-## Available Scripts
+  This application also support **Dark** and **Light** mode.
 
-In the project directory, you can run:
+![image](https://firebasestorage.googleapis.com/v0/b/iceconcreteqa.appspot.com/o/MarkDown%2FScreenshot%202023-04-10%20at%204.42.36%20pm.png?alt=media&token=50977c3c-41d6-4292-9aa1-51c47d70312b)
 
-### `npm start`
+## Login Page <bR>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To login you have to put /admin after the link for example https://ice-concrete.vercel.app/admin. When user is successfully logged in you will be able to manage AboutUs and Project section by insert, update or remove items.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To login as admin please insert:
+User name: **ivan@ga.com**
+Password: **chicken12345**
 
-### `npm test`
+![image](https://firebasestorage.googleapis.com/v0/b/iceconcreteqa.appspot.com/o/MarkDown%2FScreenshot%202023-04-10%20at%204.35.18%20pm.png?alt=media&token=42b17661-9481-463c-805f-421b14bcf8ae)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## When User/ Browser is logged in:  <bR>
 
-### `npm run build`
+-![inside](https://firebasestorage.googleapis.com/v0/b/iceconcreteqa.appspot.com/o/MarkDown%2FScreenshot%202023-04-10%20at%204.37.52%20pm.png?alt=media&token=03e53f08-7614-4e5a-b7b0-0c760ac9e2ed)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-![inside](https://firebasestorage.googleapis.com/v0/b/iceconcreteqa.appspot.com/o/MarkDown%2FScreenshot%202023-04-10%20at%204.38.01%20pm.png?alt=media&token=f106e7d8-217c-4b33-bc7a-f8a319eeae35)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Sign in view via Mobile Device:  <bR>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+![mobile](https://firebasestorage.googleapis.com/v0/b/iceconcreteqa.appspot.com/o/MarkDown%2FScreenshot%202023-04-10%20at%204.39.55%20pm.png?alt=media&token=6729480a-2774-43a5-9262-f1498aee8c9c)
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For this project we used the following Technologies :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* **React**
+* **Tailwind**
+* **Google Firebase Database**
+* **Google Firebase Authentication**
+* **NoSql**
+* **MUI Components**
+* **Deployed via Vercel**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Launch
 
-## Learn More
+This Web Application is working on :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* **Mozila Firefox**
+* **Google Chrome**
+* **Safari**
+* **All Mobile and Tablet devices**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Its also responsive to every other device so you can freely run
+starting from screen that supports **300px** resolution till **Max**.
 
-### Code Splitting
+Officially launched on **10.04.2023**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You can access the Web Application by pressing
+this **link** : **[IceConcreting](https://ice-concrete.vercel.app/)**
 
-### Analyzing the Bundle Size
+## Future improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Enable Comment Field to work**
+- **Implement Proper Checkout Form**
+- **Make Search Form available**
+- **Include Messenger application**
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# IceConcrete
-<<<<<<< HEAD
-# IceConcreteQA
-=======
->>>>>>> f396522c3c0d1bf4b78585ddb0d3f46625a03a59
+### Made and Contributed by:
+* **[Ivan Veselinov](https://github.com/ivanveselinov)**
