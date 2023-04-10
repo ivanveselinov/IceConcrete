@@ -92,9 +92,10 @@ const Main = () => {
 
   return (
     
-    <div className="w-full h-screen text-center m-auto text-2xl p-2 mt-60" >
+    <div className="w-full h-screen text-center m-auto text-2xl" >
+        <div className=" w-full h-[30%]"></div>
       <p className="mb-3 text-lime-400 font-bold underline text-center xs:text-xl xs:font-bold  sm:text-2xl sm:font-bold lg:text-2xl lg:font-bold lg:text-6xl">Welcome to Ice Concreting </p>
-      <div className="w-full border-2 text-center m-auto mb-10 rounded-xl bg-blue-200 p-4 xs:w-full  sm:w-4/5 md:w-4/5 lg:w-1/3 ">
+      <div className="w-full border-2 text-center m-auto mb-10 rounded-xl bg-blue-200 p-4 xs:w-full  sm:w-4/5 md:w-4/5 lg:w-1/3">
 
       {user ? (
           <Hero handleLogout={handleLogout}/>
