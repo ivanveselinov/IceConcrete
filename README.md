@@ -69,4 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # IceConcrete
+<<<<<<< HEAD
 # IceConcreteQA
+=======
+>>>>>>> f396522c3c0d1bf4b78585ddb0d3f46625a03a59
