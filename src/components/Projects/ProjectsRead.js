@@ -81,7 +81,7 @@ const ProjectsRead = () => {
                                       }}
                                   >
                                       {/* <p>{id}</p> */}
-                                      <p className="text-2xl">{projects}</p>
+                                      <p className="text-xl">{projects}</p>
                                   </div>
                               </div>
                               {appUser.uid && (
