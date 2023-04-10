@@ -6,6 +6,7 @@ import AboutUsDelete from './AboutUsDelete';
 import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
+import UpgradeIcon from '@mui/icons-material/Upgrade';
 
 const AboutUsInput = () => {
 
@@ -13,6 +14,7 @@ const AboutUsInput = () => {
   const [appUser, dispatch] = useContextProvider();
   const [postImage, setPostImage] = useState(); 
   const fileRef = useRef(null);
+  const buttonsDesignOnScreen="w-30 xs:flex xs:mt-1 md:mt-1 md:flex lg:flex lg:mt-0"
 
   // Insert Into AboutUs
     async function createAboutUs (e) {
@@ -120,25 +122,27 @@ const AboutUsInput = () => {
                     />    
       </div>
 
-        <div className="w-full m-auto p-4 flex space-x-2 ">
-           
+        <div className="w-full m-auto p-4 flex space-x-2 xs:block md:flex lg:flex">
             <form onSubmit={createAboutUs}>
-        
+                <div className={` ${buttonsDesignOnScreen} xs:ml-2 md:mt-1`}>
                     <Button 
-                    className="h-10"
+                    className="h-10" 
                     variant="contained" 
                     endIcon={<SendIcon />}
                     type='submit'
                     >
-                        Send
+                        Send 
+                        {/* <p className="ml-2 xs:hidden"><SendIcon /></p> */}
                     </Button>
+                </div>
             </form> 
 
             <form onSubmit={updateAboutUs}>
-                <div>
+                <div className={buttonsDesignOnScreen}>
                     <Button 
                         className="h-10"
                         variant="contained"
+                        startIcon={<UpgradeIcon />}
                         type='submit'
                         >
                           Update
@@ -147,7 +151,10 @@ const AboutUsInput = () => {
 
             </form>
         {/* Calling here aboutUs deleted */}
-            <AboutUsDelete/> 
+
+        <div className={buttonsDesignOnScreen}>
+            <AboutUsDelete/>
+        </div>
 
            {/* Photos Upload */}
 
