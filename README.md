@@ -2,7 +2,7 @@
 ## IceConcreting PTY LTD- Concrete Company
 
 This project is made for **learning purposes**.
-  This project has been created to support my friend's small business and to increase his popularity and his sale. This website also aims to track every interaction with customers and potential customers. Another advantage of this web application is that it gives details about the products and services offered and can be accessed by anyone no matter where they are. This web application will let Admin user to manage his web application independently without involving the web developer into it like e.g. setup aboutUs and Project information to **post new stuff** and to **remove them from the page**
+  This project has been created to support my friend's small business and to increase his popularity and his sales. This website also aims to track every interaction with customers and potential customers. Another advantage of this web application is that it gives details about the products and services offered and can be accessed by anyone no matter where they are. This web application will let the Admin user manage his web application independently without involving the web developer into it e.g. setup aboutUs and Project information to **post new stuff** and to **remove them from the page**
 
   This Web application also supports **Dark** and **Light** mode.
 
