@@ -14,7 +14,7 @@ const Foother = () => {
   return (
   
   <Fade bottom duration={3000}>
-    <div className="w-full h-36 inline-flex justify-between bg-gradient-to-r from-orange-600 to-blue-600 rounded-b-xl">
+    <div className="w-full h-36 inline-flex justify-between bg-gradient-to-r from-orange-600 to-blue-600">
       <div className="w-1/3 block">
         <div className="w-20 h-1/2"></div>
         <div className="w-80"> 

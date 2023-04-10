@@ -95,7 +95,7 @@ const Header = () => {
 
   return (
   // <Fade top duration={3000}>
-    <div className="z-30 w-full fixed h-32 inline-flex border-r justify-between bg-orange-600 rounded-t-xl xs:block sm:block md:inline-flex"> 
+    <div className="z-30 w-full fixed h-32 inline-flex border-r justify-between bg-orange-600 xs:block sm:block md:inline-flex"> 
 
       
         {/* If User is not logged in DONT DISPLAY WELCOME!! */}

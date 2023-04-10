@@ -50,7 +50,7 @@ const ProjectsRead = () => {
 
    
     <div className="space-x-10 ">
-        <div className="w-full mt-1 mb-1 ml-1 mr-1 inline-block ">
+        <div className="w-[98%] border-2 mt-1 mb-1 ml-3 mr-1 inline-block ">
             
               {projects?.map(({id, uid, postImage, projects, createAt}) =>
                 {

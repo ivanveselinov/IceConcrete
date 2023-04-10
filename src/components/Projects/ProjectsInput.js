@@ -77,34 +77,6 @@ const ProjectsInput = () => {
         }
     }
 
-    // Update Projects
-
-    const updateProjects = (e) => {
-        e.preventDefault();
-
-        db.collection('project').limit(100).get().then((querySnapshots) => {
-            querySnapshots.forEach((doc) =>{
-            const documentId = doc.id
-    
-            const collectionRef = firebase.firestore().collection('project');
-            const docRef = collectionRef.doc(documentId);
-            
-            docRef.update({
-                projects: projects
-            })
-            .then(() =>{
-                console.log('Document successfully updated!');
-            })
-            .catch((error) => {
-              console.error('Error updating document: ', error);
-            })
-
-                })
-            })
-
-            setProjects("")
-    }
-
   return (
 
 
@@ -131,19 +103,6 @@ const ProjectsInput = () => {
                         Send
                     </Button>
             </form> 
-
-            <form onSubmit={updateProjects}>
-                <div>
-                    <Button 
-                        className="h-10"
-                        variant="contained"
-                        type='submit'
-                        >
-                          Update
-                    </Button>
-                </div> 
-
-            </form>
 
            {/* Photos Upload */}
 
