@@ -109,7 +109,7 @@ const Header = () => {
         </div>
         }
 
-        <div className="text-center flex m-auto space-x-20 xs:w-3/4 xs:space-x-14 xs:text-sm xs:mt-10 md:mt-10 md:space-x-20 md:w-1/2 md:text-xl xl:text-2xl xl:w-1/2 "> 
+        <div className="text-center flex m-auto space-x-20 xs:w-3/4 xs:space-x-14 xs:text-sm xs:mt-10 md:mt-10 md:space-x-20 md:w-[60%] md:text-xl xl:text-2xl xl:w-1/2 "> 
 
       
           <AnchorLink href="#home" className={hoverHeader} ><HomeIcon sx ={{ fontSize: 30 }}  className={icons}/>Home</AnchorLink>
