@@ -111,7 +111,7 @@ const Header = () => {
 
         <div className="m-auto text-center"> 
 
-        <div className="text-center flex m-auto xs:w-[80%] xs:space-x-14 xs:text-sm xs:mt-2 md:mt-10 md:space-x-20 md:w-full md:text-xl xl:text-2xl xl:w-4/5">
+        <div className="text-center flex m-auto xs:w-[80%] xs:space-x-14 xs:text-sm xs:mt-10 md:mt-4 md:space-x-20 md:w-full md:text-xl xl:text-2xl xl:w-full xl:mb-5">
           <AnchorLink href="#home" className={hoverHeader} ><HomeIcon sx ={{ fontSize: 30 }}  className={icons}/>Home</AnchorLink>
           <AnchorLink href="#aboutUs" className={hoverHeader}><PeopleIcon sx ={{ fontSize: 30 }} className={icons}/>About Us</AnchorLink>
           <AnchorLink href="#projects" className={hoverHeader}><EngineeringIcon sx ={{ fontSize: 30 }} className={icons}/>Projects</AnchorLink>
