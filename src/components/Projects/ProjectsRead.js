@@ -21,14 +21,12 @@ const ProjectsRead = () => {
     }, [])
 
             
-    const handleDeleteProject = () => {
+    const handleDeleteProject = (documentId) => {
+
 
         if (window.confirm("Are you sure that you wanted to delete Project form??")) {
         
-            db.collection('project').limit(1).get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                const documentId = doc.id;
-                console.log("I am current on click documentId: ",documentId)
+                console.log("I am current on click documentId: ", documentId)
 
                 db.collection('project').doc(documentId).delete().then(() =>{
                     console.log("Document successfully deleted!");
@@ -36,15 +34,10 @@ const ProjectsRead = () => {
                 }).catch((error) =>{
                     console.error("Error removing document: ", error);
                 })
-            })
-        }).catch((error) => {
-            console.error("Error getting document: ", error);
-        })
     } else{
         console.log("Form is not deleted")
         }
     }
-
 
   return (
 
@@ -85,7 +78,7 @@ const ProjectsRead = () => {
                                   </div>
                               </div>
                               {appUser.uid && (
-                                  <Button onClick={handleDeleteProject}
+                                  <Button onClick={() => handleDeleteProject(id)}
                                       className="h-10"
                                       startIcon={<DeleteIcon />}
                                       type='submit'>
